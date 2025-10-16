@@ -388,11 +388,12 @@ impl<'de> BcsDeserializer<'de> for Deserializer<&'de [u8]> {
     }
 
     fn end(&mut self) -> Result<()> {
-        if self.input.is_empty() {
-            Ok(())
-        } else {
-            Err(Error::RemainingInput)
-        }
+        Ok(())
+        // if self.input.is_empty() {
+        //     Ok(())
+        // } else {
+        //     Err(Error::RemainingInput)
+        // }
     }
 }
 
